@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Home for Sale in FIDEPAZ La Paz | 4BR Turnkey Property</title>
+    <meta name="description" content="Exclusive 4-bedroom, 4.5-bath turnkey home in gated FIDEPAZ community. 3,358 sqft of luxury living, 10 minutes from La Paz airport. Fully furnished.">
     
     <style>
-        /* Reset para este bloque */
-        .hero-section-wrapper * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        .hero-section-wrapper {
+        body {
             font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
+            line-height: 1.6;
             color: #4a5568;
+            background: #fdfcfb;
         }
 
-        /* Header */
-        .hero-header {
+        /* ========== HEADER ========== */
+        .header {
             background: #f7f6f4;
-            color: #4a5568;
             padding: 1rem 0;
             position: sticky;
             top: 0;
@@ -29,7 +31,7 @@
             border-bottom: 1px solid #e8e6e3;
         }
 
-        .hero-header-content {
+        .header-content {
             max-width: 1280px;
             margin: 0 auto;
             padding: 0 1.5rem;
@@ -40,32 +42,7 @@
             gap: 1rem;
         }
 
-        @media (max-width: 768px) {
-            .hero-header {
-                padding: 0.75rem 0;
-            }
-            .hero-header-content {
-                padding: 0 1rem;
-                gap: 0.75rem;
-            }
-            .hero-header-phone {
-                font-size: 0.8125rem;
-                order: 3;
-                width: 100%;
-                justify-content: center;
-            }
-            .hero-header-badge {
-                order: 1;
-                font-size: 0.75rem;
-            }
-            .hero-header-cta {
-                order: 2;
-                font-size: 0.8125rem;
-                padding: 0.5rem 1rem;
-            }
-        }
-
-        .hero-header-phone {
+        .header-phone {
             display: flex;
             align-items: center;
             gap: 0.5rem;
@@ -73,18 +50,13 @@
             color: #5f6c7b;
         }
 
-        .hero-header-phone a {
+        .header-phone a {
             color: #5f6c7b;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
         }
 
-        .hero-header-phone a:hover {
-            color: #2d3748;
-        }
-
-        .hero-header-badge {
+        .header-badge {
             color: #8b7355;
             font-weight: 600;
             font-size: 0.875rem;
@@ -92,7 +64,7 @@
             text-transform: uppercase;
         }
 
-        .hero-header-cta {
+        .header-cta {
             background: #2d3748;
             color: #ffffff;
             padding: 0.625rem 1.5rem;
@@ -101,24 +73,37 @@
             font-weight: 500;
             font-size: 0.875rem;
             transition: all 0.3s;
-            letter-spacing: 0.025em;
         }
 
-        .hero-header-cta:hover {
+        .header-cta:hover {
             background: #1a202c;
-            transform: translateY(-1px);
         }
 
-        /* Hero Container */
-        .hero-container {
+        @media (max-width: 768px) {
+            .header-phone {
+                order: 3;
+                width: 100%;
+                justify-content: center;
+                font-size: 0.8125rem;
+            }
+            .header-badge {
+                order: 1;
+            }
+            .header-cta {
+                order: 2;
+                font-size: 0.8125rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        /* ========== HERO ========== */
+        .hero {
             position: relative;
             height: 85vh;
             min-height: 600px;
             overflow: hidden;
-            background: #fdfcfb;
         }
 
-        /* Gallery */
         .hero-gallery {
             position: absolute;
             inset: 0;
@@ -148,14 +133,6 @@
             background: linear-gradient(to right, rgba(247, 246, 244, 0.85), rgba(247, 246, 244, 0.6), transparent 60%);
         }
 
-        /* Mobile overlay - más oscuro */
-        @media (max-width: 768px) {
-            .hero-overlay {
-                background: linear-gradient(to bottom, rgba(247, 246, 244, 0.95) 0%, rgba(247, 246, 244, 0.9) 50%, rgba(247, 246, 244, 0.85) 100%);
-            }
-        }
-
-        /* Gallery Controls */
         .gallery-controls {
             position: absolute;
             top: 50%;
@@ -175,21 +152,12 @@
             height: 44px;
             border-radius: 50%;
             cursor: pointer;
-            transition: all 0.3s;
+            font-size: 1.25rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
-            font-weight: 300;
         }
 
-        .gallery-btn:hover {
-            background: #ffffff;
-            color: #2d3748;
-            transform: scale(1.05);
-        }
-
-        /* Gallery Indicators */
         .gallery-indicators {
             position: absolute;
             bottom: 2rem;
@@ -203,12 +171,11 @@
         .indicator {
             height: 2px;
             background: rgba(139, 115, 85, 0.3);
-            border-radius: 9999px;
             width: 24px;
             cursor: pointer;
-            transition: all 0.4s;
             border: none;
             padding: 0;
+            transition: all 0.4s;
         }
 
         .indicator.active {
@@ -216,21 +183,12 @@
             background: #8b7355;
         }
 
-        /* Hero Content */
         .hero-content {
             position: absolute;
             inset: 0;
             display: flex;
             align-items: center;
             z-index: 10;
-        }
-
-        /* Mobile content alignment */
-        @media (max-width: 768px) {
-            .hero-content {
-                align-items: flex-start;
-                padding-top: 2rem;
-            }
         }
 
         .hero-content-inner {
@@ -244,7 +202,6 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 3rem;
-            align-items: center;
         }
 
         @media (min-width: 1024px) {
@@ -253,7 +210,6 @@
             }
         }
 
-        /* Hero Text */
         .hero-text {
             color: #2d3748;
         }
@@ -277,7 +233,6 @@
             font-weight: 300;
             line-height: 1.15;
             margin-bottom: 1.5rem;
-            color: #2d3748;
             letter-spacing: -0.02em;
         }
 
@@ -296,7 +251,6 @@
         .hero-price-amount {
             font-size: 3.5rem;
             font-weight: 300;
-            color: #2d3748;
             letter-spacing: -0.03em;
         }
 
@@ -319,10 +273,8 @@
             font-size: 1rem;
             color: #5f6c7b;
             margin-bottom: 2rem;
-            font-weight: 400;
         }
 
-        /* Features Grid */
         .hero-features {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -342,14 +294,6 @@
             border-radius: 0.5rem;
             padding: 1.25rem 1rem;
             text-align: center;
-            transition: all 0.3s;
-        }
-
-        .feature-card:hover {
-            background: #ffffff;
-            border-color: rgba(139, 115, 85, 0.25);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
 
         .feature-icon {
@@ -362,7 +306,6 @@
             font-size: 1.5rem;
             font-weight: 500;
             margin-bottom: 0.25rem;
-            color: #2d3748;
         }
 
         .feature-label {
@@ -371,26 +314,20 @@
             font-weight: 500;
         }
 
-        /* Form Card */
         .hero-form-card {
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
             border-radius: 0.75rem;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
             padding: 2.5rem;
-            transition: all 0.3s;
-            display: none;
             border: 1px solid rgba(139, 115, 85, 0.1);
+            display: none;
         }
 
         @media (min-width: 1024px) {
             .hero-form-card {
                 display: block;
             }
-        }
-
-        .hero-form-card:hover {
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.12);
         }
 
         .form-title {
@@ -403,7 +340,6 @@
             font-weight: 500;
             color: #2d3748;
             margin-bottom: 0.5rem;
-            letter-spacing: -0.01em;
         }
 
         .form-title p {
@@ -415,32 +351,14 @@
             margin-bottom: 1rem;
         }
 
-        .form-input,
-        .form-select,
-        .form-textarea {
+        .form-input, .form-select, .form-textarea {
             width: 100%;
             padding: 0.875rem 1rem;
             border: 1px solid #e8e6e3;
             border-radius: 0.5rem;
             font-family: inherit;
             font-size: 0.9375rem;
-            transition: all 0.3s;
             background: #fdfcfb;
-            color: #4a5568;
-        }
-
-        .form-input:focus,
-        .form-select:focus,
-        .form-textarea:focus {
-            outline: none;
-            border-color: #8b7355;
-            background: #ffffff;
-            box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.05);
-        }
-
-        .form-input::placeholder,
-        .form-textarea::placeholder {
-            color: #a0aec0;
         }
 
         .form-textarea {
@@ -455,16 +373,7 @@
             border: none;
             border-radius: 0.5rem;
             font-weight: 500;
-            font-size: 1rem;
             cursor: pointer;
-            transition: all 0.3s;
-            letter-spacing: 0.025em;
-        }
-
-        .form-submit:hover {
-            background: #1a202c;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(45, 55, 72, 0.2);
         }
 
         .form-disclaimer {
@@ -472,7 +381,6 @@
             font-size: 0.75rem;
             color: #a0aec0;
             margin-top: 1rem;
-            line-height: 1.5;
         }
 
         .success-message {
@@ -483,8 +391,6 @@
             padding: 1rem;
             border-radius: 0.5rem;
             text-align: center;
-            font-weight: 500;
-            font-size: 0.9375rem;
             display: none;
         }
 
@@ -492,7 +398,6 @@
             display: block;
         }
 
-        /* Mobile CTA */
         .mobile-cta {
             display: block;
             margin-top: 2rem;
@@ -514,195 +419,537 @@
             text-align: center;
             text-decoration: none;
             font-weight: 500;
-            font-size: 1rem;
-            transition: all 0.3s;
-            letter-spacing: 0.025em;
         }
 
-        .mobile-cta a:hover {
-            background: #1a202c;
-            transform: translateY(-1px);
-        }
-
-        /* Responsive */
         @media (max-width: 768px) {
+            .hero {
+                height: auto;
+                min-height: 100vh;
+                padding-bottom: 2rem;
+            }
+            .hero-content {
+                align-items: flex-start;
+                padding-top: 2rem;
+            }
+            .hero-text {
+                background: rgba(247, 246, 244, 0.95);
+                padding: 1.5rem;
+                border-radius: 0.75rem;
+            }
             .hero-title {
                 font-size: 2.25rem;
             }
             .hero-price-amount {
                 font-size: 2.75rem;
             }
-            .hero-container {
-                height: auto;
-                min-height: 100vh;
-                padding-bottom: 2rem;
-            }
-            .hero-content-inner {
-                padding: 1rem;
-            }
-            .hero-text {
-                background: rgba(247, 246, 244, 0.95);
-                padding: 1.5rem;
-                border-radius: 0.75rem;
-                margin-top: 1rem;
-            }
-            .hero-features {
-                gap: 0.75rem;
-            }
-            .feature-card {
-                padding: 1rem 0.75rem;
+            .hero-overlay {
+                background: linear-gradient(to bottom, rgba(247, 246, 244, 0.95) 0%, rgba(247, 246, 244, 0.85) 100%);
             }
             .gallery-controls {
-                display: none; /* Ocultar controles en móvil */
+                display: none;
+            }
+        }
+
+        /* ========== STATS ========== */
+        .stats-section {
+            background: #f7f6f4;
+            padding: 3rem 1.5rem;
+            border-top: 1px solid #e8e6e3;
+        }
+
+        .stats-grid {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 3rem;
+            }
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 300;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .stat-label {
+            font-size: 0.9375rem;
+            color: #8b7355;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        /* ========== FEATURES ========== */
+        .features-section {
+            background: #ffffff;
+            padding: 5rem 1.5rem;
+        }
+
+        .features-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            color: #2d3748;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: #8b7355;
+            max-width: 48rem;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+        }
+
+        .feature-box {
+            background: #ffffff;
+            border-radius: 0.75rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e8e6e3;
+            padding: 2.5rem;
+        }
+
+        .feature-box.location {
+            background: #fdfcfb;
+        }
+
+        .feature-box-title {
+            font-size: 1.375rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #2d3748;
+        }
+
+        .title-accent {
+            color: #8b7355;
+            font-weight: 300;
+        }
+
+        .amenities-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .amenities-list {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .amenity-item, .location-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.875rem;
+        }
+
+        .check-icon, .dot-icon {
+            color: #8b7355;
+            flex-shrink: 0;
+            font-weight: 600;
+        }
+
+        .amenity-item span:last-child,
+        .location-item span:last-child {
+            color: #5f6c7b;
+            font-size: 0.9375rem;
+        }
+
+        .location-quote {
+            margin-top: 2rem;
+            background: #ffffff;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            border: 1px solid rgba(139, 115, 85, 0.15);
+        }
+
+        .location-quote p {
+            font-size: 0.9375rem;
+            color: #5f6c7b;
+            font-style: italic;
+            line-height: 1.7;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: #2d3748;
+            color: #ffffff;
+            padding: 3rem 1.5rem 2rem;
+            text-align: center;
+        }
+
+        .footer h4 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .footer-contacts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-contacts a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.5rem;
+            font-size: 0.8125rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* ========== WHATSAPP ========== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            background: #25d366;
+            color: white;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            z-index: 1000;
+            text-decoration: none;
+        }
+
+        @media (max-width: 767px) {
+            .features-section {
+                padding: 3rem 1rem;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+            .feature-box {
+                padding: 2rem 1.5rem;
+            }
+            .amenities-list {
+                grid-template-columns: 1fr;
+            }
+            .stat-value {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="hero-section-wrapper">
-        <!-- Header -->
-        <header class="hero-header">
-            <div class="hero-header-content">
-                <div class="hero-header-phone">
-                    <span>📞</span>
-                    <a href="tel:+526121024891">+52 612-102-4891</a>
-                </div>
-                <div class="hero-header-badge">FIDEPAZ</div>
-                <a href="#contact" class="hero-header-cta">Schedule Viewing</a>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-phone">
+                <span>📞</span>
+                <a href="tel:+526121024891">+52 612-102-4891</a>
             </div>
-        </header>
+            <div class="header-badge">FIDEPAZ</div>
+            <a href="#contact" class="header-cta">Schedule Viewing</a>
+        </div>
+    </header>
 
-        <!-- Hero -->
-        <section class="hero-container">
-            <!-- Gallery -->
-            <div class="hero-gallery">
-                <div class="hero-image active">
-                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&h=800&fit=crop" alt="Modern luxury home">
-                </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=800&fit=crop" alt="Pool view">
-                </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop" alt="Living room">
-                </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop" alt="Kitchen">
-                </div>
-                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=800&fit=crop" alt="Exterior">
-                </div>
-                <div class="hero-overlay"></div>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-gallery">
+            <div class="hero-image active">
+                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1200&h=800&fit=crop" alt="Modern luxury home">
             </div>
-
-            <!-- Gallery Controls -->
-            <div class="gallery-controls">
-                <button class="gallery-btn" id="prevBtn">‹</button>
-                <button class="gallery-btn" id="nextBtn">›</button>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&h=800&fit=crop" alt="Pool view">
             </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&h=800&fit=crop" alt="Living room">
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&h=800&fit=crop" alt="Kitchen">
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=1200&h=800&fit=crop" alt="Exterior">
+            </div>
+            <div class="hero-overlay"></div>
+        </div>
 
-            <!-- Indicators -->
-            <div class="gallery-indicators" id="indicators"></div>
+        <div class="gallery-controls">
+            <button class="gallery-btn" id="prevBtn">‹</button>
+            <button class="gallery-btn" id="nextBtn">›</button>
+        </div>
 
-            <!-- Content -->
-            <div class="hero-content">
-                <div class="hero-content-inner">
-                    <div class="hero-grid">
-                        <!-- Text -->
-                        <div class="hero-text">
-                            <span class="hero-badge">Turnkey Luxury</span>
-                            <h1 class="hero-title">
-                                Exclusive Home<br>
-                                <span class="hero-title-accent">in FIDEPAZ</span>
-                            </h1>
-                            <div class="hero-price">
-                                <span class="hero-price-amount">$1,046,160</span>
-                                <span class="hero-price-currency">USD</span>
+        <div class="gallery-indicators" id="indicators"></div>
+
+        <div class="hero-content">
+            <div class="hero-content-inner">
+                <div class="hero-grid">
+                    <div class="hero-text">
+                        <span class="hero-badge">Turnkey Luxury</span>
+                        <h1 class="hero-title">
+                            Exclusive Home<br>
+                            <span class="hero-title-accent">in FIDEPAZ</span>
+                        </h1>
+                        <div class="hero-price">
+                            <span class="hero-price-amount">$1,046,160</span>
+                            <span class="hero-price-currency">USD</span>
+                        </div>
+                        <div class="hero-price-secondary">$18,800,000 MXN</div>
+                        <div class="hero-location">
+                            <span>📍</span>
+                            <span>Av. De Las Almejas #121, La Paz, B.C.S.</span>
+                        </div>
+
+                        <div class="hero-features">
+                            <div class="feature-card">
+                                <div class="feature-icon">🛏</div>
+                                <div class="feature-value">4</div>
+                                <div class="feature-label">Bedrooms</div>
                             </div>
-                            <div class="hero-price-secondary">$18,800,000 MXN</div>
-                            <div class="hero-location">
-                                <span>📍</span>
-                                <span>Av. De Las Almejas #121, La Paz, B.C.S.</span>
+                            <div class="feature-card">
+                                <div class="feature-icon">🚿</div>
+                                <div class="feature-value">4.5</div>
+                                <div class="feature-label">Bathrooms</div>
                             </div>
-
-                            <!-- Features -->
-                            <div class="hero-features">
-                                <div class="feature-card">
-                                    <div class="feature-icon">🛏</div>
-                                    <div class="feature-value">4</div>
-                                    <div class="feature-label">Bedrooms</div>
-                                </div>
-                                <div class="feature-card">
-                                    <div class="feature-icon">🚿</div>
-                                    <div class="feature-value">4.5</div>
-                                    <div class="feature-label">Bathrooms</div>
-                                </div>
-                                <div class="feature-card">
-                                    <div class="feature-icon">📐</div>
-                                    <div class="feature-value">3,358</div>
-                                    <div class="feature-label">sqft Built</div>
-                                </div>
-                                <div class="feature-card">
-                                    <div class="feature-icon">🏡</div>
-                                    <div class="feature-value">4,919</div>
-                                    <div class="feature-label">sqft Lot</div>
-                                </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">📐</div>
+                                <div class="feature-value">3,358</div>
+                                <div class="feature-label">sqft Built</div>
                             </div>
-
-                            <!-- Mobile CTA -->
-                            <div class="mobile-cta">
-                                <a href="#contact">Schedule Viewing</a>
+                            <div class="feature-card">
+                                <div class="feature-icon">🏡</div>
+                                <div class="feature-value">4,919</div>
+                                <div class="feature-label">sqft Lot</div>
                             </div>
                         </div>
 
-                        <!-- Form Card (Desktop) -->
-                        <div class="hero-form-card">
-                            <div class="form-title">
-                                <h3>Schedule Your Visit</h3>
-                                <p>Response within 1 hour</p>
+                        <div class="mobile-cta">
+                            <a href="#contact">Schedule Viewing</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-form-card">
+                        <div class="form-title">
+                            <h3>Schedule Your Visit</h3>
+                            <p>Response within 1 hour</p>
+                        </div>
+                        <form id="heroForm">
+                            <div class="form-group">
+                                <input type="text" class="form-input" placeholder="Full name" required>
                             </div>
-                            <form id="heroForm">
-                                <div class="form-group">
-                                    <input type="text" class="form-input" placeholder="Full name" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-input" placeholder="Email" required>
-                                </div>
-                                <div class="form-group">
-                                    <input type="tel" class="form-input" placeholder="Phone" required>
-                                </div>
-                                <div class="form-group">
-                                    <select class="form-select">
-                                        <option value="buy">Looking to buy</option>
-                                        <option value="invest">Investment property</option>
-                                        <option value="info">Just gathering info</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <select class="form-select">
-                                        <option value="">Preferred contact method</option>
-                                        <option value="email">Email</option>
-                                        <option value="phone">Phone call</option>
-                                        <option value="whatsapp">WhatsApp</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <textarea class="form-textarea" rows="3" placeholder="Message (optional)"></textarea>
-                                </div>
-                                <button type="submit" class="form-submit">Request Information</button>
-                                <p class="form-disclaimer">Your information is protected</p>
-                            </form>
-                            <div class="success-message" id="heroSuccess">
-                                ✓ Request received. We'll contact you soon.
+                            <div class="form-group">
+                                <input type="email" class="form-input" placeholder="Email" required>
                             </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-input" placeholder="Phone" required>
+                            </div>
+                            <div class="form-group">
+                                <select class="form-select">
+                                    <option value="buy">Looking to buy</option>
+                                    <option value="invest">Investment property</option>
+                                    <option value="info">Just gathering info</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-textarea" rows="3" placeholder="Message (optional)"></textarea>
+                            </div>
+                            <button type="submit" class="form-submit">Request Information</button>
+                            <p class="form-disclaimer">Your information is protected</p>
+                        </form>
+                        <div class="success-message" id="heroSuccess">
+                            ✓ Request received. We'll contact you soon.
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-value">10 min</div>
+                <div class="stat-label">From LAP<br>Airport</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">Move-in</div>
+                <div class="stat-label">Ready</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">Fully</div>
+                <div class="stat-label">Furnished</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">FIDEPAZ</div>
+                <div class="stat-label">Gated<br>Community</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features-section">
+        <div class="features-container">
+            <div class="section-header">
+                <h2 class="section-title">Sea of Cortez Living</h2>
+                <p class="section-subtitle">Contemporary architecture that embraces the natural beauty of Baja California Sur</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <h3 class="feature-box-title">
+                        <span class="title-accent">—</span>
+                        Premium Features
+                    </h3>
+                    <div class="amenities-list">
+                        <div class="amenity-item">
+                            <span class="check-icon">✓</span>
+                            <span>Fully furnished turnkey</span>
+                        </div>
+                        <div class="amenity-item">
+                            <span class="check-icon">✓</span>
+                            <span>Swimming pool</span>
+                        </div>
+                        <div class="amenity-item">
+                            <span class="check-icon">✓</span>
+                            <span>3-car garage</span>
+                        </div>
+                        <div class="amenity-item">
+                            <span class="check-icon">✓</span>
+                            <span>Large covered terrace</span>
+                        </div>
+                        <div class="amenity-item">
+                            <span class="check-icon">✓</span>
+                            <span>Security cameras</span>
+                        </div>
+                        <div class="amenity-item">
+                            <span class="check-icon">✓</span>
+                            <span>Gourmet kitchen</span>
+                        </div>
+                        <div class="amenity-item">
+                            <span class="check-icon">✓</span>
+                            <span>Storage room</span>
+                        </div>
+                        <div class="amenity-item">
+                            <span class="check-icon">✓</span>
+                            <span>Laundry room</span>
+                        </div>
+                        <div class="amenity-item">
+                            <span class="check-icon">✓</span>
+                            <span>10,000 L water tank</span>
+                        </div>
+                        <div class="amenity-item">
+                            <span class="check-icon">✓</span>
+                            <span>Premium finishes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-box location">
+                    <h3 class="feature-box-title">
+                        <span class="title-accent">—</span>
+                        Prime Location
+                    </h3>
+                    <div class="amenities-list">
+                        <div class="location-item">
+                            <span class="dot-icon">·</span>
+                            <span>10 min to La Paz Airport</span>
+                        </div>
+                        <div class="location-item">
+                            <span class="dot-icon">·</span>
+                            <span>15 min to Downtown Malecón</span>
+                        </div>
+                        <div class="location-item">
+                            <span class="dot-icon">·</span>
+                            <span>20 min to Marina CostaBaja</span>
+                        </div>
+                        <div class="location-item">
+                            <span class="dot-icon">·</span>
+                            <span>25 min to Balandra Beach</span>
+                        </div>
+                        <div class="location-item">
+                            <span class="dot-icon">·</span>
+                            <span>30 min to Espíritu Santo tours</span>
+                        </div>
+                        <div class="location-item">
+                            <span class="dot-icon">·</span>
+                            <span>Shopping centers nearby</span>
+                        </div>
+                    </div>
+                    <div class="location-quote">
+                        <p>In the heart of FIDEPAZ, one of La Paz's most exclusive gated communities, where desert meets the Sea of Cortez</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div>
+            <h4>Luz Espinoza</h4>
+            <p>Real Estate Agent | La Paz, B.C.S.</p>
+            <div class="footer-contacts">
+                <a href="tel:+526121024891">+52 612-102-4891</a>
+                <span style="color: rgba(255, 255, 255, 0.3);">·</span>
+                <a href="mailto:luz@luzespinoza.com">luz@luzespinoza.com</a>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Luz Espinoza Real Estate</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/526121024891?text=Hi%2C%20I'm%20interested%20in%20the%20FIDEPAZ%20property" target="_blank" class="whatsapp-float">
+        <svg style="width: 1.75rem; height: 1.75rem;" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+    </a>
 
     <script>
-        // Gallery functionality
+        // Gallery
         (function() {
             let currentSlide = 0;
             const slides = document.querySelectorAll('.hero-image');
@@ -732,7 +979,6 @@
                 clearInterval(autoRotate);
             }
 
-            // Create indicators
             const indicatorsContainer = document.getElementById('indicators');
             for (let i = 0; i < totalSlides; i++) {
                 const indicator = document.createElement('button');
@@ -766,7 +1012,7 @@
 
             startAutoRotate();
 
-            // Form handling
+            // Form
             document.getElementById('heroForm').addEventListener('submit', function(e) {
                 e.preventDefault();
                 const successMsg = document.getElementById('heroSuccess');
